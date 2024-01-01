@@ -1,0 +1,410 @@
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+.Link{
+  text-decoration: none;
+  cursor: pointer;
+  color: #525252;
+}
+*{
+  margin: 0px;
+}
+
+body{
+  width: 100%;
+  background-color: #525252;
+}
+
+.display{
+  height: 600px;
+  width: 300px;
+  border-radius: 25px;
+  position: relative;
+  background-color: #1b1c1d;
+}
+
+
+nav{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  background-color: #282a2c;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  align-items: center;
+}
+
+nav ul{
+  padding: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  color: #bec7d4;
+  height: 100%;
+}
+nav ul .Link{
+  text-decoration: none;
+  color: #bec7d4 ;
+  cursor: pointer;
+  padding-inline: 20px;
+  border-radius: 20px;
+  height: 70%;
+  align-self: center;
+  display: flex;
+  align-items: center;
+}
+
+nav ul .Link:hover{
+  color: white;
+}
+
+nav ul > .active{
+  background-color: #525252;
+  color: white;
+}
+.contactMain,.addContactMain, .contactDetailsMain, .dailpadMain{
+  padding: 10px;
+  background-color: #1b1c1d;
+  width: 300px;
+  height: 550px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding-top: 40px;
+  position: relative;
+}
+
+.contacts{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  overflow-y: scroll;
+}
+.contacts::-webkit-scrollbar{
+  width: 1px;
+}
+
+
+.contact{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  transition: .5s ease-in-out;
+}
+
+
+.contact p a{
+  text-decoration: none;
+  color: white;
+}
+.userPic{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  font-size: 20px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  
+}
+.serchBar{
+  background-color: #282a2c;
+  border: none;
+  color: #ccc9cb;
+  outline: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+
+.contact{
+  padding: 5px 20px;
+  border-radius: 20px;
+  background-color: #282a2c;
+}
+
+.contact p{
+  color: #ccc;
+  padding: .5rem;
+}
+
+/* ---Add Contact Button Page--- */
+
+.addContact{
+ position: absolute;
+ bottom: 20px;
+ right: 20px;
+ height: 40px;
+ aspect-ratio: 1/1;
+ border-radius: 25%;
+ background-color: #bec7d4;
+ display: flex;
+ color: #1b1c1d;
+ justify-content: center;
+ align-items: center;
+ cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.addContactMain{
+  padding: 20px 10px;
+}
+
+.addContactMain .top,.contactDetailsMain .top{
+  display: flex;
+  width: 100%;
+  padding: 0px 10px;
+  text-align: center;
+  align-items: center;
+}
+
+.top > h4{
+  color: #bec7d4;
+  font-weight: 400;
+  margin-left: 15px;
+}
+
+.top input{
+  margin-left: auto;
+  max-width: 70px;
+  background-color: #bec7d4;
+  border: none;
+  color: #282a2c;
+  outline: none;
+  padding: 5px 15px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.addContactMain form{
+  padding: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0px;
+}
+
+.addContactMain form input{
+  background-color: transparent;
+  border: 2px solid #525252 ;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  outline: none;
+  color: #bec7d4;
+  transition: .3s ease-in-out;
+}
+
+.addContactMain form input:focus{
+  border: 2px solid #bec7d4 ;
+}
+
+label{
+  color: #bec7d4;
+}
+
+.addContactMain .photo{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.addContactMain .photo .addPhoto{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#1b1c1d;
+  cursor: pointer;
+}
+
+.addContactMain .addPhoto ~ p{
+  color: white;
+  font-size: 15px;
+}
+
+/*--- Contact detials---*/
+
+.contactDetailsMain{
+  background: #1b1c1d !important;
+  padding: 20px ;
+}
+
+.top .edit{
+  margin-left: auto;
+}
+
+.top .delete{
+  margin-left: 20px;
+  cursor: pointer;
+  color: #525252;
+}
+
+.details{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.contactDetailsMain .details .userPic{
+  height: 125px;
+  width: 125px;
+  font-size: 60px;
+}
+
+.contactDetailsMain .details .userName{
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.contactDetailsMain .details .userNumbers{
+  background-color: #282a2c;
+  border-radius: 25px;
+  width: 100%;
+  color: #bec7d4;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.userNumber{
+  margin-bottom: 5px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.userNumber a{
+  color: #bec7d4;
+}
+
+.userNumbers .number{
+  font-weight: 500;
+}
+
+.userNumbers .whatsapp{
+  margin-left: auto;
+  font-size: 20px;
+}
+
+/* DailPad */
+
+.dailpadMain{
+  position: relative;
+  height: 550px;
+  padding: 0px;
+}
+
+.dailpad{
+  position: absolute;
+  bottom: 0;
+  background-color: #282a2c;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dailpad > input{
+  background-color: #282a2c;
+  border: 0px ;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.dailpad > input:focus{
+  outline: none;
+}
+
+.dail{
+  display: grid;
+  flex: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-top: 1px solid #525252 ;
+  padding: 5px;
+
+}
+
+.dail .btn, .btn{
+  background-color: #1b1c1d;
+  border: none;
+  color: #bec7d4;
+  border-radius: 25px;
+  margin: 5px;
+  font-size: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.dail .btn:after{
+  content: "";
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: 25px;
+  transition: .2s all ease-in-out ;
+ 
+}
+
+.dail .btn:active:after{
+  opacity: 0.5;
+  transition: 0s;
+}
+
+.dailpad > .btn{
+  position: absolute;
+  right: 0;
+  top: 5px;
+  align-self: center;
+  background-color: transparent;
+}
+
+.dailpadMain > .contacts{
+  margin: 20px 10px;
+  overflow-x: scroll;
+  height: 50%;
+  border-radius: 25px;
+}
+
+.extra-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.extra-btn .fa-phone{
+  color: green;
+  font-size: 15px;
+  
+}
